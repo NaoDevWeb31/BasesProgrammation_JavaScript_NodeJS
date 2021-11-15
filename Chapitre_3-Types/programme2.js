@@ -6,8 +6,8 @@
 var score = 10;
 var nom = "Milo";
 var sexe = true;
-console.log("Le score est de " + score);
-console.log("Le nom est " + nom);
+console.log("Le score est de %d", score); // %d => décimal
+console.log("Le nom est %s", nom); // %s => string
 console.log("Le sexe est " + sexe);
 
 var phrase = "Bonjour";
