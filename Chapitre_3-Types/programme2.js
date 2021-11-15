@@ -10,9 +10,9 @@ console.log("Le score est de " + score);
 console.log("Le nom est " + nom);
 console.log("Le sexe est " + sexe);
 
-var mot1 = "bonjour";
-var mot2 = "toto.";
-var mot3 = "Comment tu vas ?";
+var phrase = "Bonjour";
+phrase += " "; // phrase = phrase + " "
+phrase += "toto.\n"; // phrase = phrase + "toto.\n"
+phrase += "Comment tu vas ?"; // phrase = phrase + "Comment tu vas ?"
 
-var phrase = mot1 + " " + mot2 + " " + mot3;
 console.log(phrase);
