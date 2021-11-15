@@ -16,3 +16,9 @@ phrase += "toto.\n"; // phrase = phrase + "toto.\n"
 phrase += "Comment tu vas ?"; // phrase = phrase + "Comment tu vas ?"
 
 console.log(phrase);
+
+var chiffre1 = 1; // chiffre 1 est un entier
+var chiffre2 = "2"; // chiffre 2 est une chaîne
+var chiffre3 = chiffre1 + chiffre2;
+
+console.log("Le chiffre 3 est égal à " + chiffre3); // Le chiffre 3 est égal à 12
