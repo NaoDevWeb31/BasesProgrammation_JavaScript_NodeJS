@@ -1,2 +1,2 @@
 var score = 10;
-console.log(score);
+console.log("Le score est de : " + score);
