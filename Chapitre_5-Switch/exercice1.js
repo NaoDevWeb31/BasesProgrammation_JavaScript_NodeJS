@@ -16,9 +16,9 @@ switch (moisEnLettre) {
   case "janvier":
     console.log(txt + "1");
     break;
-    console.log(txt + "2");
   case "Février":
   case "février":
+    console.log(txt + "2");
     break;
   case "Mars":
   case "mars":
