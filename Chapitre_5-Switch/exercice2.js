@@ -28,3 +28,15 @@ switch (age) {
     console.log("Âge non pris en compte");
     break;
 }
+
+        // ÉQUIVAUT À //
+
+if (age >= 16 && age <= 17) {
+  console.log("Mineur");
+} else if (age >= 18 && age <= 20) {
+  console.log("Majeur");
+} else if (age >= 21 && age <= 24) {
+  console.log("Adulte");
+} else {
+  console.log("Âge non pris en compte");
+}
