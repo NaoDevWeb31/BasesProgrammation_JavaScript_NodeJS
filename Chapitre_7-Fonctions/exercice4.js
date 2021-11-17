@@ -27,7 +27,7 @@ direBonjour(prenomSaisi, langueSaisie);
 
 afficherLignesSeparation(1);
 
-// Fonction
+// Fonctions
 function direBonjour(pseudo, langue) {
   switch (langue.toLowerCase()) {
     case "fr":
