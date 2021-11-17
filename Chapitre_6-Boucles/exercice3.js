@@ -6,8 +6,14 @@
 
 var resultat = 0;
 
-for (let cpt = 0; cpt <= 200; cpt = cpt + 2) {
-  resultat += cpt;
+// for (var cpt = 0; cpt <= 200; cpt = cpt + 2) {
+//   resultat += cpt;
+// }
+
+for (var cpt = 0; cpt <= 200; cpt++) {
+  if (cpt % 2 === 0) {
+    resultat += cpt;
+  }
 }
 
 console.log(
