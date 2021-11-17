@@ -13,9 +13,16 @@ var resultat = 1;
 for (var cpt = 1; cpt <= factorielle; cpt++) {
   resultat *= cpt;
 
+  var msg = "";
+  msg += cpt;
+
   if (cpt === 1) {
-    console.log(cpt + "er passage - total = " + resultat);
+    msg += "er ";
   } else {
-    console.log(cpt + "ème passage - total = " + resultat);
+    msg += "ème ";
   }
+
+  msg += "passage - total = " + resultat;
+
+  console.log(msg);
 }
