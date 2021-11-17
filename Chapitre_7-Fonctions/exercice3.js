@@ -5,10 +5,19 @@
  */
 
 // Main
+var readline = require("readline-sync");
+
 verifierParite(2);
 verifierParite(3);
 verifierParite(4);
 verifierParite(5);
+
+console.log("----------------------------------------------");
+
+var nbSaisi = readline.questionInt(
+  "Saisir un nombre pour vérifier sa parité : "
+);
+verifierParite(nbSaisi);
 
 // Fonction
 function verifierParite(nombre) {
