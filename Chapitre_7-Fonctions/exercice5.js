@@ -5,6 +5,8 @@
  */
 
 // Main
+var readline = require("readline-sync");
+
 verifierParite(50, 2);
 afficherLignesSeparation(1);
 verifierParite(50, 3);
@@ -12,6 +14,11 @@ afficherLignesSeparation(1);
 verifierParite(50, 4);
 afficherLignesSeparation(1);
 verifierParite(50, 5);
+afficherLignesSeparation(1);
+
+var nbSaisi = readline.questionInt("Saisir un nombre : ");
+var diviseurSaisi = readline.questionInt("Saisir un diviseur : ");
+verifierParite(nbSaisi, diviseurSaisi);
 
 // Fonctions
 function verifierParite(nombre, diviseur) {
