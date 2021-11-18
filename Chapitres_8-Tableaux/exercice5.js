@@ -7,7 +7,7 @@
 // Main
 var readline = require("readline-sync");
 
-var tableau = [4, 8, 12, 16];
+var tableau = [];
 
 do {
   afficherMenu();
@@ -17,7 +17,7 @@ do {
   switch (choixMenu) {
     case 1:
       afficherLignesSeparation(1, 1, "       —— 𝟏 ——       ");
-      console.log("Affichage du tableau");
+      console.log("Affichage du Tableau");
       afficherLignesSeparation(1, 23, "-");
       afficherTableau(tableau);
       break;
@@ -26,7 +26,13 @@ do {
       console.log("Calcul de la Moyenne");
       afficherLignesSeparation(1, 23, "-");
       var moyenne = calculerMoyenne(tableau);
-      console.log("La moyenne est de : %d", moyenne);
+      console.log("La moyenne est de : %d", moyenne.toFixed(1));
+      break;
+    case 3:
+      afficherLignesSeparation(1, 1, "     —— 𝟑 ——     ");
+      console.log("Saisie du Tableau");
+      afficherLignesSeparation(1, 23, "-");
+      tableau = saisirTableau();
       break;
     case 0:
       console.log("À +");
@@ -42,6 +48,7 @@ do {
 function afficherMenu() {
   var menu = "1/ Afficher le tableau\n";
   menu += "2/ Calculer la moyenne\n";
+  menu += "3/ Saisir un tableau\n";
   menu += "0/ Sortir";
   afficherLignesSeparation(1, 23, "*");
   console.log(menu);
@@ -49,8 +56,12 @@ function afficherMenu() {
 }
 
 function afficherTableau(tab) {
-  for (var cpt = 0; cpt < tab.length; cpt++) {
-    console.log("Indice : %d - Valeur : %d", cpt, tab[cpt]);
+  if (tab.length === 0) {
+      console.log("Tableau vide !");
+  } else {
+    for (var cpt = 0; cpt < tab.length; cpt++) {
+      console.log("Indice : %d - Valeur : %d", cpt, tab[cpt]);
+    }
   }
 }
 
@@ -61,6 +72,15 @@ function calculerMoyenne(tab) {
   }
   var moyenne = resultat / tab.length;
   return moyenne;
+}
+
+function saisirTableau() {
+  var nbValeurs = readline.questionInt("Combien de notes voulez-vous ? ");
+  var valeurs = [];
+  for (var cpt = 1; cpt <= nbValeurs; cpt++) {
+    valeurs.push(readline.questionInt("Saisir la note numéro " + cpt + " : "));
+  }
+  return valeurs;
 }
 
 function creerLigneSeparation(nbSymboles, symbole) {
