@@ -1,7 +1,7 @@
 /**
  * LES OBJETS
  * -
- * Exercice 1
+ * Exemple
  */
 
 var perso1 = {
