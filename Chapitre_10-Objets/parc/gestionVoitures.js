@@ -85,6 +85,24 @@ var parcVoiture = {
       }
     } while (saisie !== 0);
   },
+  suppressionModele: function (modele) {
+    var position = this.recupererPositionModele(modele);
+    if (position !== -1) {
+      this.voitures.splice(position, 1);
+      console.log("Suppression réussie");
+    } else {
+      console.log("Modèle inexistant");
+    }
+  },
+  recupererPositionModele: function (modele) {
+    for (var cpt = 0; cpt < this.voitures.length; cpt++) {
+      const voiture = this.voitures[cpt];
+      if (voiture.modele.toLowerCase() === modele.toLowerCase()) {
+        return cpt;
+      }
+    }
+    return -1;
+  },
 };
 
 module.exports = parcVoiture;
