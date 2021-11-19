@@ -5,7 +5,7 @@
  */
 
 // Classe
-class Perso {
+class Eleve {
   constructor(nom, note1, note2, note3) {
     this.nom = nom;
     this.note1 = note1;
@@ -15,9 +15,9 @@ class Perso {
 }
 
 // Main
-var P1 = new Perso("Toto", 15, 13, 10);
-var P2 = new Perso("Titi", 12, 17, 16);
-var P3 = new Perso("Tata", 10, 8, 12);
+var P1 = new Eleve("Toto", 15, 13, 10);
+var P2 = new Eleve("Titi", 12, 17, 16);
+var P3 = new Eleve("Tata", 10, 8, 12);
 
 var persos = [P1, P2, P3];
 
@@ -33,12 +33,12 @@ for (var cpt = 0; cpt < persos.length; cpt++) {
  * @param {Object} P P : Objet contenant le nom et les notes d'un élève
  * @returns {number} retourne la moyenne
  */
-function calculerMoyenne(P) {
+function calculerMoyenne(eleve) {
   var moyenne = 0;
   var nbNotes = 0;
-  for (var element in P) {
-    if (typeof P[element] === "number") {
-      const note = P[element];
+  for (var element in eleve) {
+    if (typeof eleve[element] === "number") {
+      const note = eleve[element];
       moyenne += note;
       nbNotes++;
     }
