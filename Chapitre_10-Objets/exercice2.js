@@ -93,6 +93,7 @@ function afficherUnPerso(personnage) {
 function motPremierLettreEnMajuscule(mot) {
   return mot.charAt(0).toUpperCase() + mot.slice(1);
 }
+
 /**
  * Fonction permettant de créer un personnage
  * @returns {Object} retourne un objet contenant les infos d'un personnage
